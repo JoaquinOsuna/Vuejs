@@ -5,20 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Eventos</title>
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
-    <div id="eventos">
-        <!-- <button v-on:click="alerta('Esta es la alerta')">Mostrar Alerta</button> -->
-        <!-- <button v-on:click="restarUno">Restar uno</button> -->
-        <!-- <hr> -->
-        <!-- {{ contador }} -->
-        <div style="height: 300px; border: 2px solid black;" @mousemove="mostrarUbicacion"
-         v-on:click.once="sumar(3)"></div>
-        x: {{x}}, y: {{y}}, contador: {{contador}}
-        <input type="text" v-on:keyup.delete='sumar(1)'>
-    </div>
-
+    
     <script src="vue.js"></script>
 </body>
 </html>
