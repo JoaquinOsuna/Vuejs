@@ -29,6 +29,15 @@
         <p>Cuarto: {{ cuarto }}</p>
         <p>Quinto: {{ quinto }}</p>
         <p>Total: {{ total }}</p>
+
+        <br>
+        <button v-on:click="primero=0, segundo=0, tercero=0, cuarto=0, quinto=0">Restablecer</button>
+    </div>
+        
+    <div id="nv">
+        <input type="text" v-model="nombre">
+        <hr>
+        <p>Hola {{ nombre }}, bienvenido al curso de Vue.js</p>
     </div>
     <script src="vue.js"></script>
 </body>

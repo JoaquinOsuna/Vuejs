@@ -52,4 +52,11 @@ new Vue({
     }
 })
 
+new Vue({
+    el: '#nv',
+    data: {
+        nombre: ''
+    }
+})
+
 
