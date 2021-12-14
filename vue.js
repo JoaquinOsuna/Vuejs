@@ -1,3 +1,4 @@
+
 new Vue({
     el: '#eventos',
     data: {
@@ -25,4 +26,5 @@ new Vue({
 
     }
 })
+
 
