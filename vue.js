@@ -1,62 +1,28 @@
-var app = new Vue({
-    el: '.vue',
+new Vue({
+    el: '#eventos',
     data: {
-        mensaje: 'Aprende Vue.js Facilmente',
-        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png'
+        contador: 0,
+        x: 0,
+        y: 0
     },
-        beforeCreate: function(){
-            console.log('Llamando beforeCreate');
-        },
-        created: function(){
-            console.log('Llamando create');
-        },
-        beforeMount: function(){
-            console.log('Llamando beforeMount');
-        },
-        mounted: function(){
-            console.log('Llamando mounted');
-        },
-        beforeUpdate: function(){
-            console.log('Llamando beforeUpdate');
-        },
-        updated: function(){
-            console.log('Llamando updated');
-        },
-        beforeDestroy: function(){
-            console.log('Llamando beforeDestroy');
-        },
-        destroyed: function(){
-            console.log('Llamando destroyed');
-        },
     methods: {
-            destruir : function(){
-                this.$destroy();
-            }
-    }
-}) 
-
-new Vue({
-    el: '#vm',
-    data: {
-        primero: 0,
-        segundo: 0,
-        tercero: 0,
-        cuarto: 0,
-        quinto: 0,
-        suma: 0
-    },
-    computed: {
-        total: function(){
-            return this.primero + this.segundo + this.tercero + this.cuarto;
+        // sumarUno: function(){
+        //     this.contador += 1;
+        // },
+        // restarUno: function(){
+        //     this.contador -=1;
+        // }
+        // alerta: function(mensaje){
+        //     alert(mensaje);
+        // }
+        mostrarUbicacion: function(evento){
+            this.x = evento.clientX;
+            this.y = evento.clientY;
+        },
+        sumar: function(cantidad){
+            this.contador+=cantidad;
         }
+
     }
 })
-
-new Vue({
-    el: '#nv',
-    data: {
-        nombre: ''
-    }
-})
-
 

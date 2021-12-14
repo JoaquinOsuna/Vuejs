@@ -5,39 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Primera aplicacion de Vue</title>
+    <title>Eventos</title>
 </head>
 <body>
-    <div class="vue">
-        <h3>{{ mensaje }}</h3>
-        <img :src="src" alt="" height="50px" width="50px"><br>
-
-        <button v-on:click="mensaje = 'ESTE ES EL NUEVO MENSAJE'">Cambiar Mensaje</button>
-        <button v-on:click="destruir"> Destruir instancia</button>
-
-    </div>
-
-    <div id="vm">
-        <button v-on:click="primero++">Incrementar el primero</button>
-        <button v-on:click="segundo++">Incrementar el segundo</button>
-        <button v-on:click="tercero++">Incrementar el tercero</button>
-        <button v-on:click="cuarto++">Incrementar el cuarto</button>
-        <button v-on:click="quinto++">Incrementar el quinto</button>
-        <p>Primero: {{ primero }}</p>
-        <p>Segundo: {{ segundo }}</p>
-        <p>Tercero: {{ tercero }}</p>
-        <p>Cuarto: {{ cuarto }}</p>
-        <p>Quinto: {{ quinto }}</p>
-        <p>Total: {{ total }}</p>
-
-        <br>
-        <button v-on:click="primero=0, segundo=0, tercero=0, cuarto=0, quinto=0">Restablecer</button>
-    </div>
-        
-    <div id="nv">
-        <input type="text" v-model="nombre">
-        <hr>
-        <p>Hola {{ nombre }}, bienvenido al curso de Vue.js</p>
+    <div id="eventos">
+        <!-- <button v-on:click="alerta('Esta es la alerta')">Mostrar Alerta</button> -->
+        <!-- <button v-on:click="restarUno">Restar uno</button> -->
+        <!-- <hr> -->
+        <!-- {{ contador }} -->
+        <div style="height: 300px; border: 2px solid black;" @mousemove="mostrarUbicacion"
+         v-on:click.once="sumar(3)"></div>
+        x: {{x}}, y: {{y}}, contador: {{contador}}
+        <input type="text" v-on:keyup.delete='sumar(1)'>
     </div>
     <script src="vue.js"></script>
 </body>
