@@ -5,40 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Primera aplicacion de Vue</title>
+    <title>Directivas</title>
 </head>
 <body>
-    <div class="vue">
-        <h3>{{ mensaje }}</h3>
-        <img :src="src" alt="" height="50px" width="50px"><br>
 
-        <button v-on:click="mensaje = 'ESTE ES EL NUEVO MENSAJE'">Cambiar Mensaje</button>
-        <button v-on:click="destruir"> Destruir instancia</button>
+        <div id="vm">
+            <img :src="imagen" alt="">
+        </div>
+        <div id="vt">
+            <div v-text="texto"></div>
+        </div>
+        <div id="vh" v-html="texthtml"></div>
 
-    </div>
-
-    <div id="vm">
-        <button v-on:click="primero++">Incrementar el primero</button>
-        <button v-on:click="segundo++">Incrementar el segundo</button>
-        <button v-on:click="tercero++">Incrementar el tercero</button>
-        <button v-on:click="cuarto++">Incrementar el cuarto</button>
-        <button v-on:click="quinto++">Incrementar el quinto</button>
-        <p>Primero: {{ primero }}</p>
-        <p>Segundo: {{ segundo }}</p>
-        <p>Tercero: {{ tercero }}</p>
-        <p>Cuarto: {{ cuarto }}</p>
-        <p>Quinto: {{ quinto }}</p>
-        <p>Total: {{ total }}</p>
-
-        <br>
-        <button v-on:click="primero=0, segundo=0, tercero=0, cuarto=0, quinto=0">Restablecer</button>
-    </div>
-        
-    <div id="nv">
-        <input type="text" v-model="nombre">
+        <div id="vifelse">
+            <div v-if="mostrar">Este es el primer div</div>
+            <div v-else>Este es el segundo div</div>
+        </div>
         <hr>
-        <p>Hola {{ nombre }}, bienvenido al curso de Vue.js</p>
-    </div>
+        <br>
+        <div id="velseif">
+            <div v-if="parrafo == 1">Este es el primer div</div>
+            <div v-else-if="parrafo == 2">Este es el segundo div</div>
+            <div v-else-if="parrafo == 3">Este es el tercer div</div>
+            <div v-else>Parrafo no es ni 1 ni 2 ni 3</div>
+        </div>
+        <br>
+        <hr>
+        <h2>Loops</h2>
+        <div id="vf">
+            <ul>
+                <template v-for="(pais, index) in paises">
+                    <li> {{ index + 1 }} - {{pais.nombre}} </li>
+                    <hr>
+                </template>
+            </ul>
+        </div>
+        <div id="vob">
+            <ul>
+                <li v-for='(valor, llave) in empleado'>
+                   {{llave}}--> {{ valor }}
+                </li>
+            </ul>
+        </div>
     <script src="vue.js"></script>
 </body>
 </html>
