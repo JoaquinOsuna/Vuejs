@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Lista de tareas</title>
     <link rel="stylesheet" href="estilos/estilo.css">
 </head>
-<body>
+<body class="container">
+    <div id="app" class="jumbotron">
+        <h2>{{titulo}}</h2>
+        <div class="input-group">
+        <input type="text" placeholder="Escribe una nueva tarea" v-model="nuevaTarea" class="form-control">
+        <span class="input-group-btn">
+            <button type="button" v-on:click="agregarTarea()" class="btn btn-primary">Agregar</button>
+        </span>
+        </div>
+       <ul class="list-group">
+            <li v-for="tarea in tareas" class="list-group-item"> 
+                {{tarea.texto}} {{tarea.terminada}}
+                <span class="pull-right">
+                    <button type="button" class="btn btn-success "></button>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
     
     <script src="vue.js"></script>
 </body>
