@@ -9,7 +9,12 @@
 </head>
 <body>
     <div class="vue">
-        <span>{{ mostrarMensaje() }}</span>
+        <h3>{{ mensaje }}</h3>
+        <img :src="src" alt="" height="50px" width="50px"><br>
+
+        <button v-on:click="mensaje = 'ESTE ES EL NUEVO MENSAJE'">Cambiar Mensaje</button>
+        <button v-on:click="destruir"> Destruir instancia</button>
+
     </div>
     <script src="vue.js"></script>
 </body>
