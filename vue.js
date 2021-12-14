@@ -1,57 +1,30 @@
 
 new Vue({
-    el: '#vm',
+    el: '#eventos',
     data: {
-        imagen: 'https://th.bing.com/th/id/OIP.EgSPriuEnAtlIWJV8R_E1QHaGs?pid=ImgDet&rs=1'
-    }
-})
-
-new Vue({
-    el: '#vt',
-    data: {
-        texto: 'Bienvenido al curso de Vue.js'
-    }
-})
-
-new Vue({
-    el: '#vh',
-    data: {
-        texthtml: "<em>Bienvenido al curso de Vue.js</em>"
-    }
-})
-
-new Vue({
-    el: '#vifelse',
-    data: {
-        mostrar : false
-    }
-})
-
-new Vue({
-    el: '#velseif',
-    data: {
-        parrafo: 1
-    }
-})
-
-new Vue({
-    el: '#vf',
-    data: {
-        paises: [{nombre: 'Mexico'}, {nombre: 'Espana'}, {nombre: 'Colombia'}],
-
-    }
-})
-
-new Vue({
-    el: '#vob',
-    data: {
-        empleado: {
-            nombre: 'Carlos Castro',
-            edad: '30 a;os',
-            nacionalidad: 'Mexicano',
-            profesion: 'Programador',
-            empresa: 'IBM',
-            telefono: '2532905'
+        contador: 0,
+        x: 0,
+        y: 0
+    },
+    methods: {
+        // sumarUno: function(){
+        //     this.contador += 1;
+        // },
+        // restarUno: function(){
+        //     this.contador -=1;
+        // }
+        // alerta: function(mensaje){
+        //     alert(mensaje);
+        // }
+        mostrarUbicacion: function(evento){
+            this.x = evento.clientX;
+            this.y = evento.clientY;
+        },
+        sumar: function(cantidad){
+            this.contador+=cantidad;
         }
+
     }
 })
+
+

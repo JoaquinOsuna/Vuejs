@@ -5,48 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Directivas</title>
+    <title>Eventos</title>
 </head>
 <body>
+    <div id="eventos">
+        <!-- <button v-on:click="alerta('Esta es la alerta')">Mostrar Alerta</button> -->
+        <!-- <button v-on:click="restarUno">Restar uno</button> -->
+        <!-- <hr> -->
+        <!-- {{ contador }} -->
+        <div style="height: 300px; border: 2px solid black;" @mousemove="mostrarUbicacion"
+         v-on:click.once="sumar(3)"></div>
+        x: {{x}}, y: {{y}}, contador: {{contador}}
+        <input type="text" v-on:keyup.delete='sumar(1)'>
+    </div>
 
-        <div id="vm">
-            <img :src="imagen" alt="">
-        </div>
-        <div id="vt">
-            <div v-text="texto"></div>
-        </div>
-        <div id="vh" v-html="texthtml"></div>
-
-        <div id="vifelse">
-            <div v-if="mostrar">Este es el primer div</div>
-            <div v-else>Este es el segundo div</div>
-        </div>
-        <hr>
-        <br>
-        <div id="velseif">
-            <div v-if="parrafo == 1">Este es el primer div</div>
-            <div v-else-if="parrafo == 2">Este es el segundo div</div>
-            <div v-else-if="parrafo == 3">Este es el tercer div</div>
-            <div v-else>Parrafo no es ni 1 ni 2 ni 3</div>
-        </div>
-        <br>
-        <hr>
-        <h2>Loops</h2>
-        <div id="vf">
-            <ul>
-                <template v-for="(pais, index) in paises">
-                    <li> {{ index + 1 }} - {{pais.nombre}} </li>
-                    <hr>
-                </template>
-            </ul>
-        </div>
-        <div id="vob">
-            <ul>
-                <li v-for='(valor, llave) in empleado'>
-                   {{llave}}--> {{ valor }}
-                </li>
-            </ul>
-        </div>
     <script src="vue.js"></script>
 </body>
 </html>
