@@ -16,6 +16,20 @@
         <button v-on:click="destruir"> Destruir instancia</button>
 
     </div>
+
+    <div id="vm">
+        <button v-on:click="primero++">Incrementar el primero</button>
+        <button v-on:click="segundo++">Incrementar el segundo</button>
+        <button v-on:click="tercero++">Incrementar el tercero</button>
+        <button v-on:click="cuarto++">Incrementar el cuarto</button>
+        <button v-on:click="quinto++">Incrementar el quinto</button>
+        <p>Primero: {{ primero }}</p>
+        <p>Segundo: {{ segundo }}</p>
+        <p>Tercero: {{ tercero }}</p>
+        <p>Cuarto: {{ cuarto }}</p>
+        <p>Quinto: {{ quinto }}</p>
+        <p>Total: {{ total }}</p>
+    </div>
     <script src="vue.js"></script>
 </body>
 </html>
