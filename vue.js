@@ -1,62 +1,57 @@
-var app = new Vue({
-    el: '.vue',
-    data: {
-        mensaje: 'Aprende Vue.js Facilmente',
-        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png'
-    },
-        beforeCreate: function(){
-            console.log('Llamando beforeCreate');
-        },
-        created: function(){
-            console.log('Llamando create');
-        },
-        beforeMount: function(){
-            console.log('Llamando beforeMount');
-        },
-        mounted: function(){
-            console.log('Llamando mounted');
-        },
-        beforeUpdate: function(){
-            console.log('Llamando beforeUpdate');
-        },
-        updated: function(){
-            console.log('Llamando updated');
-        },
-        beforeDestroy: function(){
-            console.log('Llamando beforeDestroy');
-        },
-        destroyed: function(){
-            console.log('Llamando destroyed');
-        },
-    methods: {
-            destruir : function(){
-                this.$destroy();
-            }
-    }
-}) 
 
 new Vue({
     el: '#vm',
     data: {
-        primero: 0,
-        segundo: 0,
-        tercero: 0,
-        cuarto: 0,
-        quinto: 0,
-        suma: 0
-    },
-    computed: {
-        total: function(){
-            return this.primero + this.segundo + this.tercero + this.cuarto;
-        }
+        imagen: 'https://th.bing.com/th/id/OIP.EgSPriuEnAtlIWJV8R_E1QHaGs?pid=ImgDet&rs=1'
     }
 })
 
 new Vue({
-    el: '#nv',
+    el: '#vt',
     data: {
-        nombre: ''
+        texto: 'Bienvenido al curso de Vue.js'
     }
 })
 
+new Vue({
+    el: '#vh',
+    data: {
+        texthtml: "<em>Bienvenido al curso de Vue.js</em>"
+    }
+})
 
+new Vue({
+    el: '#vifelse',
+    data: {
+        mostrar : false
+    }
+})
+
+new Vue({
+    el: '#velseif',
+    data: {
+        parrafo: 1
+    }
+})
+
+new Vue({
+    el: '#vf',
+    data: {
+        paises: [{nombre: 'Mexico'}, {nombre: 'Espana'}, {nombre: 'Colombia'}],
+
+    }
+})
+
+new Vue({
+    el: '#vob',
+    data: {
+        empleado: {
+            nombre: 'Carlos Castro',
+            edad: '30 a;os',
+            nacionalidad: 'Mexicano',
+            profesion: 'Programador',
+            empresa: 'IBM',
+            telefono: '2532905'
+        }
+    }
+})
